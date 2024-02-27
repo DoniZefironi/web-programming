@@ -41,3 +41,34 @@ I have experience working with js, html, css. <br>Below I have provided examples
 - JS - 15/100
 - C++ - 20/100
 
+## Code examples:
+
+```js
+const chai = require("chai");
+const assert = chai.assert;
+chai.config.truncateThreshold=0;
+describe("Persistent Bugger.", () =>
+{
+it("Fixed tests", () => {
+assert.strictEqual(persistence(39),3);
+assert.strictEqual(persistence(4),0);
+assert.strictEqual(persistence(25),2);
+assert.strictEqual(persistence(999),4);
+});
+});
+function persistence(num)
+{
+let counter = 0;
+let digits = num.toString().split('');
+while (digits.length > 1)
+{
+num = digits.reduce((a, b) => a * b);
+digits = num.toString().split('');
+counter++;
+}
+return counter;
+}
+```
+## English language:
+ 
+ - Elementary (A2)
